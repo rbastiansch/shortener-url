@@ -47,7 +47,10 @@ export default {
   ],
 
   router: {
-    middleware: 'validate.middleware'
+    middleware: [
+      'validate.middleware',
+      'validateSignin.middleware'
+    ]
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

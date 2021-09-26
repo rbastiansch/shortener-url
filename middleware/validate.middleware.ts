@@ -2,9 +2,9 @@ import { Context } from '@nuxt/types'
 import UrlShortener from '~/services/backendMock'
 
 export default function (context: Context) {
-    const { path } = context.route
+    const { path, name } = context.route
     const formattedPath = path.replace('/', '')
-    if(!formattedPath) {
+    if(!formattedPath || name) {
         return
     }
 
