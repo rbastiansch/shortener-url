@@ -1,11 +1,19 @@
 <template>
-  <div>
-    <v-text-field v-model="input" />
-    <v-btn @click="generateUrl">
-      Generate Url
-    </v-btn>
+  <div class="search">
+    <div class="search__grid">
+      <v-text-field v-model="input" />
+      <v-btn
+        color="#012a35"
+        @click="generateUrl"
+      >
+        Generate Url
+      </v-btn>
+    </div>
 
-    <div v-if="urlGenerated">
+    <div
+      v-if="urlGenerated"
+      class="search__result"
+    >
       Generated Url: {{ urlGenerated }}
     </div>
   </div>
@@ -24,12 +32,21 @@ export default {
   },
   methods: {
     generateUrl () {
-      const result = UrlShortener.createUrl(this.input)
-
-      this.urlGenerated = result
-
-      console.log(result)
+      this.urlGenerated = UrlShortener.createUrl(this.input)
     }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.search__grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 25px;
+    align-items: center;
+}
+
+.search__grid .v-btn {
+  color: white;
+}
+</style>
