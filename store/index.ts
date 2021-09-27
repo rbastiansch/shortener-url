@@ -1,12 +1,18 @@
+import { UserPayload } from '~/types/common.interface'
+
+interface StoreState {
+  userLogged: UserPayload | null
+}
+
 export const state = () => ({
-    userLogged: null
-})
+  userLogged: null
+} as StoreState)
 
 export const mutations = {
-    setUserLogged (state: any, user: any) {
-        state.userLogged = user
-    },
-    removeUserLogged (state: any) {
-        state.userLogged = null
-    }
+  setUserLogged(state: StoreState, user: UserPayload) {
+    state.userLogged = user
+  },
+  removeUserLogged(state: StoreState) {
+    state.userLogged = null
+  }
 }
