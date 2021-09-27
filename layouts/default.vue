@@ -17,7 +17,7 @@
         <v-btn
           v-else
           text
-          color="#012a35"
+          color="#00dc82"
           to="/signin"
         >
           SignIn
@@ -25,7 +25,7 @@
         <v-btn
           v-if="isLogged"
           text
-          color="#012a35"
+          color="#00dc82"
           @click="logout"
         >
           Logout
@@ -61,12 +61,12 @@ export default {
 
 <style lang="scss" scoped>
 .defaultApp__bar {
-  background-color: #00dc82 !important;
+  background-color: #001e26 !important;
 }
 .defaultApp__bar__content {
   width: 100%;
 }
 .defaultApp__bar__content__title {
-  color: #012a35;
+  color: #00dc82;
 }
 </style>
