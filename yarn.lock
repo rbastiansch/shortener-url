@@ -21,7 +21,7 @@
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.15.0.tgz#2dbaf8b85334796cafbb0f5793a90a2fc010b176"
   integrity sha512-0NqAC1IJE0S0+lL1SWFMxMkz1pKCNCjI4tr2Zx4LJSXxCLAdr6KyArnY+sno5m3yH9g737ygOyPABDsnXkpxiA==
 
-"@babel/core@^7.1.0", "@babel/core@^7.12.16", "@babel/core@^7.14.0", "@babel/core@^7.7.2", "@babel/core@^7.7.5":
+"@babel/core@^7.1.0", "@babel/core@^7.12.0", "@babel/core@^7.12.16", "@babel/core@^7.14.0", "@babel/core@^7.7.2", "@babel/core@^7.7.5":
   version "7.15.5"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.15.5.tgz#f8ed9ace730722544609f90c9bb49162dc3bf5b9"
   integrity sha512-pYgXxiwAgQpgM1bNkZsDEq85f0ggXMA5L7c+o3tskGMh2BunCI9QUwB9Z4jpvXUOuMdyGKiGKQiRe11VS6Jzvg==
@@ -2807,6 +2807,11 @@ babel-plugin-transform-es2015-modules-commonjs@^6.26.0:
     babel-runtime "^6.26.0"
     babel-template "^6.26.0"
     babel-types "^6.26.0"
+
+babel-plugin-transform-inline-environment-variables@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-inline-environment-variables/-/babel-plugin-transform-inline-environment-variables-0.4.3.tgz#a3b09883353be8b5e2336e3ff1ef8a5d93f9c489"
+  integrity sha1-o7CYgzU76LXiM24/8e+KXZP5xIk=
 
 babel-plugin-transform-strict-mode@^6.24.1:
   version "6.24.1"
@@ -7454,6 +7459,14 @@ neo-async@^2.5.0, neo-async@^2.6.1, neo-async@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
+
+netlify-plugin-inline-functions-env@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/netlify-plugin-inline-functions-env/-/netlify-plugin-inline-functions-env-1.0.9.tgz#947b57c3f1fe8d50b42fd050f3ff558a2d48d87b"
+  integrity sha512-a3lfiWKuLYjbWuKSrHkpYLwfq2Um6ib/JJXaoxq0vvms6yQC1xtzKAYUt4jUN4UKeyujBpANH3dEKgkS1tyodg==
+  dependencies:
+    "@babel/core" "^7.12.0"
+    babel-plugin-transform-inline-environment-variables "^0.4.3"
 
 no-case@^2.2.0:
   version "2.3.2"
