@@ -1,7 +1,7 @@
 <template>
   <v-list>
     <v-list-item
-      v-for="item in getUrlsList()"
+      v-for="item in userUrls"
       :key="item.hash"
       :href="item.originUrl"
     >
@@ -14,19 +14,17 @@
 
 <script>
 import { mapState } from 'vuex'
-import UrlShortener from '~/services/backendMock'
 
 export default {
   computed: {
-    ...mapState(['userLogged']),
+    ...mapState(['userLogged', 'userUrls']),
+  },
+  mounted() {
+    this.getUrlsList()
   },
   methods: {
     getUrlsList() {
-      if (!this.userLogged) {
-        return
-      }
-
-      return UrlShortener.getDatabaseUsersByUserId(this.userLogged.id)
+      this.$store.dispatch('loadSavedUrls')
     },
   },
 }

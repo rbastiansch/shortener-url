@@ -1,15 +1,6 @@
+import { UserPayload, DatabaseItem } from '~/types/common.interface'
 import { nanoid } from 'nanoid'
 const validUrl = require('valid-url')
-
-import { UserPayload } from '~/types/common.interface'
-
-interface DatabaseItem {
-  id?: number;
-  userId?: string;
-  originUrl: string;
-  shortUrl: string;
-  hash: string
-}
 
 class UrlShortener {
   database: Array<DatabaseItem>
@@ -92,7 +83,7 @@ class UrlShortener {
     return shortUrl
   }
 
-  public getDatabaseUsersByUserId(userId: string): Array<DatabaseItem> {
+  public getDatabaseUrlsByUserId(userId: string): Array<DatabaseItem> {
     return this.database.filter(item => item.userId === userId)
   }
 }

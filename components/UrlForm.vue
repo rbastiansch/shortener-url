@@ -46,6 +46,8 @@ export default {
   methods: {
     generateUrl () {
       this.urlGenerated = UrlShortener.createUrl(this.input)
+      this.$store.dispatch('loadSavedUrls')
+      this.input = null
     },
     copyText (text) {
       navigator.clipboard.writeText(text)
