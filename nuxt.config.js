@@ -4,6 +4,10 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
+  env: {
+    baseUrl: process.env.BASE_URL
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - url-shortener',
@@ -71,7 +75,7 @@ export default {
       }
     },
     rtl: false,
-  },
+  },  
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

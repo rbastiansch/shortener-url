@@ -22,7 +22,7 @@ class UrlShortener {
     this.database = localDatabase ? JSON.parse(localDatabase) : []
     this.users = localUsers ? JSON.parse(localUsers) : []
 
-    this.baseUrl = process.env.BASE_URL
+    this.baseUrl = process.env.baseUrl
   }
 
   public createUrl(url: string): string | boolean {
@@ -73,7 +73,6 @@ class UrlShortener {
   }
 
   private mountUrlPayloadAndSaveToDatabase(url: string): string {
-    const baseUrl = process.env.BASE_URL
     const hash = nanoid(6)
 
     const shortUrl = `${this.baseUrl}${hash}`
